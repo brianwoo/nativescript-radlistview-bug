@@ -27,10 +27,9 @@ class names available for styling your app at https://docs.nativescript.org/ui/t
 
     <RadListView [items]="itemsOnPage" class="list-group">
         <ng-template tkListItemTemplate let-item="item">
-            <GridLayout columns="*,auto" rows="auto">
-                <Label row="0" col="0" class="h3" 
-                    text='{{item.name + " - " + item.role}}'></Label>
-                <Label row="0" col="1" class="h3" text="{{item.id}}"></Label>  
+            <GridLayout columns="*, 30" rows="*">
+                <Label class="h3" text='{{item.name + " - " + item.role}}'></Label>
+                <Label col="1" class="h3" text="{{item.id}}" style="text-align: right"></Label>  
             </GridLayout>                
         </ng-template>
     </RadListView>
